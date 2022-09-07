@@ -1,0 +1,72 @@
+<div class="container mg-bt--md">
+  <h1 class="center">Reactive form</h1>
+  <form
+    class="form"
+    [formGroup]="reactiveForm"
+    #formDir="ngForm"
+    (ngSubmit)="onSubmit(reactiveForm); formDir.resetForm()"
+  >
+    <div class="container">
+      <label for="firstName">First name </label>
+      <input
+        id="firstName"
+        type="text"
+        class="form__input"
+        formControlName="firstName"
+        required
+      />
+      <div class="alert" [hidden]="firstName.valid || firstName.pristine">
+        First name is required.
+      </div>
+    </div>
+
+    <div class="container">
+      <label for="lastName">Last name </label>
+      <input
+        id="lastName"
+        type="text"
+        class="form__input"
+        formControlName="lastName"
+        required
+      />
+      <div class="alert" [hidden]="lastName.valid || lastName.pristine">
+        Last name is required.
+      </div>
+    </div>
+
+    <div class="container">
+      <label for="position">Position</label>
+      <select
+        id="position"
+        class="form__input"
+        formControlName="position"
+        required
+      >
+        <option *ngFor="let pos of positions" [value]="pos">{{ pos }}</option>
+      </select>
+    </div>
+
+    <div class="container">
+      <label for="experience">Experience (years)</label>
+      <input
+        id="experience"
+        type="number"
+        class="form__input"
+        formControlName="experience"
+        required
+      />
+      <div class="alert" [hidden]="experience.valid || experience.pristine">
+        <div *ngIf="experience.errors?.['required']">
+          Experience is required.
+        </div>
+        <div *ngIf="experience.errors?.['min']">
+          Experience can't be lower than 0.
+        </div>
+      </div>
+    </div>
+
+    <button [disabled]="!formDir.form.valid" class="button" type="submit">
+      Submit
+    </button>
+  </form>
+</div>

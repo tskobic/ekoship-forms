@@ -1,0 +1,76 @@
+<div class="container">
+  <h1 class="center">Template-driven form</h1>
+
+  <form class="form" #templateForm="ngForm" (ngSubmit)="onSubmit(templateForm)">
+    <div class="container">
+      <label for="firstName">First name</label>
+      <input
+        type="text"
+        id="firstName"
+        class="form__input"
+        required
+        [(ngModel)]="model.firstName"
+        name="firstName"
+        #firstName="ngModel"
+      />
+      <div class="alert" [hidden]="firstName.valid || firstName.pristine">
+        First name is required.
+      </div>
+    </div>
+
+    <div class="container">
+      <label for="lastName">Last name</label>
+      <input
+        type="text"
+        id="lastName"
+        class="form__input"
+        required
+        [(ngModel)]="model.lastName"
+        name="lastName"
+        #lastName="ngModel"
+      />
+      <div class="alert" [hidden]="lastName.valid || lastName.pristine">
+        Last name is required.
+      </div>
+    </div>
+
+    <div class="container">
+      <label for="position">Position</label>
+      <select
+        id="position"
+        required
+        class="form__input"
+        [(ngModel)]="model.position"
+        name="position"
+      >
+        <option *ngFor="let pos of positions" [value]="pos">{{ pos }}</option>
+      </select>
+    </div>
+
+    <div class="container">
+      <label for="experience">Experience (years)</label>
+      <input
+        type="number"
+        id="experience"
+        required
+        min="0"
+        class="form__input"
+        [(ngModel)]="model.experience"
+        name="experience"
+        #experience="ngModel"
+      />
+      <div class="alert" [hidden]="experience.valid || experience.pristine">
+        <div *ngIf="experience.errors?.['required']">
+          Experience is required.
+        </div>
+        <div *ngIf="experience.errors?.['min']">
+          Experience can't be lower than 0.
+        </div>
+      </div>
+    </div>
+
+    <button [disabled]="!templateForm.form.valid" class="button" type="submit">
+      Submit
+    </button>
+  </form>
+</div>
