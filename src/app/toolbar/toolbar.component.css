@@ -11,6 +11,41 @@
   font-weight: 600;
 }
 
-.toolbar span {
+.toolbar > span {
   margin: 0 16px;
+}
+
+.font-color--green {
+  color: #37b5ac;
+}
+
+nav {
+  margin-left: 50px;
+  height: 100%;
+}
+
+ul {
+  height: 100%;
+  list-style-type: none;
+  padding: 0px 20px;
+  margin: 0px;
+  overflow: hidden;
+  background-color: #37b5ac;
+  display: flex;
+  align-items: center;
+}
+
+li:not(:last-of-type) {
+  margin-right: 10px;
+}
+
+li a {
+  display: inline-block;
+  padding: 8px;
+  text-decoration: none;
+  color: white;
+}
+
+li a:hover {
+  transform: scale(1.1);
 }

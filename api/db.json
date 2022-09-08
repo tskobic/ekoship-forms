@@ -1,0 +1,14 @@
+{
+  "persons": [
+    {
+      "firstName": "Mate",
+      "lastName": "Matić",
+      "email": "mate.matic@gmail.com"
+    },
+    {
+      "firstName": "Ante",
+      "lastName": "Antić",
+      "email": "ante.antic@gmail.com"
+    }
+  ]
+}
