@@ -41,7 +41,7 @@
         "
       >
         <div *ngIf="personForm.get('email')!.errors?.['email']">
-          E-mail is not in good format.
+          E-mail format is not valid.
         </div>
         <div *ngIf="personForm.get('email')!.errors?.['emailTaken']">
           E-mail is already taken.
