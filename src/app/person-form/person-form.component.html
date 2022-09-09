@@ -40,6 +40,9 @@
           personForm.get('email')!.valid || personForm.get('email')!.pristine
         "
       >
+        <div *ngIf="personForm.get('email')!.errors?.['required']">
+          E-mail is required.
+        </div>
         <div *ngIf="personForm.get('email')!.errors?.['email']">
           E-mail format is not valid.
         </div>

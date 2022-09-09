@@ -25,7 +25,7 @@ export class PersonFormComponent implements OnInit {
       firstName: new FormControl(this.model.firstName),
       lastName: new FormControl(this.model.lastName),
       email: new FormControl(this.model.email, {
-        validators: [Validators.email],
+        validators: [Validators.required, Validators.email],
         asyncValidators: emailTakenValidator(this.personService),
         updateOn: 'blur',
       }),
