@@ -1,0 +1,15 @@
+<h1 class="center">Directives</h1>
+<div class="flex-container mg--md">
+  <app-square
+    *ngFor="let square of numbers; let i = index"
+    [index]="i"
+  ></app-square>
+</div>
+<h1 class="center">Pipes</h1>
+<div class="mg--md">
+  <p>Today's date is {{ date | date }}.</p>
+  <p>{{ "Uppercase pipe showcase" | uppercase }}</p>
+  <p>{{ 20 | currency: 'USD'}}</p>
+  <p>First letter capitalization custom pipe: {{ "toni škobić" | firstLetterCapitalization}}</p>
+  <p>Calculate days since start of the year, month and week custom pipe:  {{ date | daysSinceCalculator }}</p>
+</div>

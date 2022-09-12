@@ -13,6 +13,11 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { PersonFormComponent } from './person-form/person-form.component';
 import { AppRoutingModule } from './app-routing.module';
 import { JobApplicationComponent } from './job-application/job-application.component';
+import { SquareComponent } from './square/square.component';
+import { DirectivesAndPipesComponent } from './directives-and-pipes/directives-and-pipes.component';
+import { HighlightDirective } from './highlight.directive';
+import { FirstLetterCapitalizationPipePipe } from './first-letter-capitalization-pipe.pipe';
+import { DaysSinceCalculatorPipePipe } from './days-since-calculator-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { JobApplicationComponent } from './job-application/job-application.compo
     TemplateDrivenFormComponent,
     ReactiveFormComponent,
     PersonFormComponent,
-    JobApplicationComponent
+    JobApplicationComponent,
+    SquareComponent,
+    DirectivesAndPipesComponent,
+    HighlightDirective,
+    FirstLetterCapitalizationPipePipe,
+    DaysSinceCalculatorPipePipe
   ],
   imports: [
     BrowserModule,

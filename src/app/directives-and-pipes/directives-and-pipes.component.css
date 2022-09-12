@@ -1,0 +1,18 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px;
+}
+
+.mg--md {
+  margin: 10px;
+}
+
+.center {
+  text-align: center;
+}
+
+p {
+  font-size: 1.8rem;
+}
