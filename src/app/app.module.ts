@@ -4,6 +4,7 @@ import { CommonModule } from "@angular/common";
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from "@angular/common/http";
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
@@ -16,8 +17,8 @@ import { JobApplicationComponent } from './job-application/job-application.compo
 import { SquareComponent } from './square/square.component';
 import { DirectivesAndPipesComponent } from './directives-and-pipes/directives-and-pipes.component';
 import { HighlightDirective } from './highlight.directive';
-import { FirstLetterCapitalizationPipePipe } from './first-letter-capitalization-pipe.pipe';
-import { DaysSinceCalculatorPipePipe } from './days-since-calculator-pipe.pipe';
+import { FirstLetterCapitalizationPipe } from './first-letter-capitalization.pipe';
+import { DaysSinceCalculatorPipe } from './days-since-calculator.pipe';
 
 @NgModule({
   declarations: [
@@ -31,8 +32,8 @@ import { DaysSinceCalculatorPipePipe } from './days-since-calculator-pipe.pipe';
     SquareComponent,
     DirectivesAndPipesComponent,
     HighlightDirective,
-    FirstLetterCapitalizationPipePipe,
-    DaysSinceCalculatorPipePipe
+    FirstLetterCapitalizationPipe,
+    DaysSinceCalculatorPipe
   ],
   imports: [
     BrowserModule,
@@ -40,6 +41,7 @@ import { DaysSinceCalculatorPipePipe } from './days-since-calculator-pipe.pipe';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FontAwesomeModule,
     AppRoutingModule
   ],
   providers: [],

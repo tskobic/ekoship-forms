@@ -1,10 +1,26 @@
 <div class="toolbar" role="banner">
   <span><span class="font-color--green">Eko</span>ship forms</span>
-  <nav>
+  <nav class="nav">
     <ul>
       <li><a routerLink="/job-application">Job application</a></li>
       <li><a routerLink="/person">Person form</a></li>
       <li><a routerLink="/directives-and-pipes">Directives and Pipes</a></li>
     </ul>
   </nav>
+  <div class="menu-icon" (click)="setNav()">
+    <fa-icon [icon]="faIcon"></fa-icon>
+  </div>
 </div>
+<nav [ngClass]="!isNavOpen ? 'hidden' : ''" class="nav--mobile">
+  <ul>
+    <li (click)="setNav()" routerLink="/job-application">
+      <a>Job application</a>
+    </li>
+    <li (click)="setNav()" routerLink="/person">
+      <a>Person form</a>
+    </li>
+    <li (click)="setNav()" routerLink="/directives-and-pipes">
+      <a>Directives and Pipes</a>
+    </li>
+  </ul>
+</nav>

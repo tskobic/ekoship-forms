@@ -3,7 +3,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({
   name: 'daysSinceCalculator',
 })
-export class DaysSinceCalculatorPipePipe implements PipeTransform {
+export class DaysSinceCalculatorPipe implements PipeTransform {
   transform(value: Date): string {
     return `${this.calculateDayOfYear(value)}; ${this.calculateDayOfMonth(
       value
