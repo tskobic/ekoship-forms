@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="message">
+    Light is turned on in the child component: {{ turnedOnLight }}
+  </div>
+
+  <div class="light-container">
+    <button class="button" (click)="turnLightOn(first)">
+      Turn on the light
+    </button>
+    <app-light #first [id]="1"></app-light>
+  </div>
+
+  <div class="light-container">
+    <button class="button" (click)="turnLightOn(second)">
+      Turn on the light
+    </button>
+    <app-light #second [id]="2"></app-light>
+  </div>
+
+  <div class="light-container">
+    <button class="button" (click)="turnLightOn(third)">
+      Turn on the light
+    </button>
+    <app-light #third [id]="3"></app-light>
+  </div>
+</div>

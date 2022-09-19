@@ -1,22 +1,22 @@
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  min-width: 300px;
+  align-items: center;
 }
 
-.center {
-  text-align: center;
-}
-
-.form {
+.light-container {
   display: flex;
   flex-direction: column;
+  border: #37b5ac 2px solid;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 2rem;
+  max-width: 200px;
 }
 
-.form__input {
-  margin: 7px;
-  padding: 7px;
+.message {
+  font-size: 2rem;
+  padding: 1rem;
 }
 
 .button {
@@ -26,6 +26,7 @@
   padding: 15px 32px;
   margin: 5px 2px;
   font-weight: 600;
+  position: relative;
 }
 
 .button:hover {
@@ -42,16 +43,3 @@
   cursor: auto;
 }
 
-.alert {
-  background-color: rgba(255, 0, 0, 0.3);
-  border-radius: 5px;
-  padding: 5px;
-  margin-bottom: 5px;
-}
-
-@media screen and (max-width: 480px) {
-  .container {
-    min-width: 0;
-    max-width: 25rem;
-  }
-}

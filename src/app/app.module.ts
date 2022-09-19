@@ -19,6 +19,8 @@ import { DirectivesAndPipesComponent } from './directives-and-pipes/directives-a
 import { HighlightDirective } from './highlight.directive';
 import { FirstLetterCapitalizationPipe } from './first-letter-capitalization.pipe';
 import { DaysSinceCalculatorPipe } from './days-since-calculator.pipe';
+import { LightComponent } from './light/light.component';
+import { LightSwitcherComponent } from './light-switcher/light-switcher.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { DaysSinceCalculatorPipe } from './days-since-calculator.pipe';
     DirectivesAndPipesComponent,
     HighlightDirective,
     FirstLetterCapitalizationPipe,
-    DaysSinceCalculatorPipe
+    DaysSinceCalculatorPipe,
+    LightComponent,
+    LightSwitcherComponent
   ],
   imports: [
     BrowserModule,
