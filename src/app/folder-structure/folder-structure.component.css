@@ -1,0 +1,13 @@
+.folder {
+  border: 2px solid;
+  border-radius: 5px;
+  padding-inline: 2rem;
+}
+
+.hidden {
+  display: none
+}
+
+.ident {
+  padding-left: 20px
+}

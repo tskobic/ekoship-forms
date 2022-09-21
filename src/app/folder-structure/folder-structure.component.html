@@ -1,0 +1,25 @@
+<ng-template #folder let-startFolder let-hidden="hidden">
+  <h3 class="folder" (click)="changeVisibility(f)">{{ startFolder.name }}</h3>
+  <div #f [ngClass]="hidden ? 'hidden': ''" class="ident">
+    <ng-container
+      *ngIf="startFolder.files.length > 0 || startFolder.folders.length > 0"
+    >
+      <ng-container *ngIf="startFolder.files.length > 0">
+        <div *ngFor="let file of startFolder.files; let i = index">
+          -{{ file.name }}
+        </div>
+      </ng-container>
+      <div *ngIf="startFolder.folders.length > 0">
+        <ng-container *ngFor="let nestedFolder of startFolder.folders">
+          <ng-container
+            *ngTemplateOutlet="folder; context: { $implicit: nestedFolder, hidden: true }"
+          ></ng-container>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+</ng-template>
+
+<ng-container
+  *ngTemplateOutlet="folder; context: { $implicit: rootFolder, hidden: false }"
+></ng-container>

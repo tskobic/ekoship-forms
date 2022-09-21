@@ -21,6 +21,7 @@ import { FirstLetterCapitalizationPipe } from './first-letter-capitalization.pip
 import { DaysSinceCalculatorPipe } from './days-since-calculator.pipe';
 import { LightComponent } from './light/light.component';
 import { LightSwitcherComponent } from './light-switcher/light-switcher.component';
+import { FolderStructureComponent } from './folder-structure/folder-structure.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { LightSwitcherComponent } from './light-switcher/light-switcher.componen
     FirstLetterCapitalizationPipe,
     DaysSinceCalculatorPipe,
     LightComponent,
-    LightSwitcherComponent
+    LightSwitcherComponent,
+    FolderStructureComponent,
   ],
   imports: [
     BrowserModule,
