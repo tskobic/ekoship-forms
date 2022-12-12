@@ -17,6 +17,8 @@
 .form__input {
   margin: 7px;
   padding: 7px;
+  border: 1px solid;
+  border-color: rgb(118, 118, 118)
 }
 
 .button {
