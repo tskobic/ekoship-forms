@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { JobApplicant } from '../job-applicant';
+import { JobApplicant } from '../../models/job-applicant';
 
-import { positions } from '../mock-positions';
+import { positions } from '../../mocks/mock-positions';
 
 @Component({
   selector: 'app-template-driven-form',

@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { LightComponent } from '../light/light.component';
+import { LightComponent } from '../../components/light/light.component';
 
 @Component({
   selector: 'app-light-switcher',

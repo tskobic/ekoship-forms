@@ -1,4 +1,4 @@
-import { Folder } from './folder';
+import { Folder } from '../models/folder';
 
 export const folder: Folder = {
   name: 'root-folder',

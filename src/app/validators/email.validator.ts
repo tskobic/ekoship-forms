@@ -4,7 +4,7 @@ import {
   ValidationErrors,
 } from '@angular/forms';
 import { map, Observable, tap } from 'rxjs';
-import { PersonService } from './person.service';
+import { PersonService } from '../services/person.service';
 
 export function emailTakenValidator(
   personService: PersonService

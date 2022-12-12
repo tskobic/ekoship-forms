@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Folder } from '../folder';
-import { folder } from '../mock-folder';
+import { Folder } from '../../models/folder';
+import { folder } from '../../mocks/mock-folder';
 
 @Component({
   templateUrl: './folder-structure.component.html',

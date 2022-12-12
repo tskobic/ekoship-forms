@@ -4,9 +4,9 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { emailTakenValidator } from '../email.validator';
-import { Person } from '../person';
-import { PersonService } from '../person.service';
+import { emailTakenValidator } from '../../validators/email.validator';
+import { Person } from '../../models/person';
+import { PersonService } from '../../services/person.service';
 
 @Component({
   selector: 'app-person-form',
